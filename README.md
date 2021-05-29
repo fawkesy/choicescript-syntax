@@ -15,7 +15,9 @@ It does not include a copy of ChoiceScript. It cannot run QuickTest or RandomTes
 - [Color Scheme](#art-color-scheme)
 - [Screenshots](#camera_flash-screenshots)
 - [Autocomplete Commands](#zap-autocomplete-commands)
+- [ChoiceScript Tips](#bulb-choicescript-tips)
 - [Editing and Customization](#memo-editing-and-customization)
+- [Contact Me](#iphone-contact-me)
 - [Disclaimer](#exclamation-disclaimer)
 
 ## :gem: Features
@@ -129,6 +131,19 @@ Startup.txt Header | `cs_header` | <img width="448" alt="cs_header" src="https:/
 
 If need or desire ever arises, more autocomplete commands may be added in the future.
 
+## :bulb: ChoiceScript Tips
+These are some general quality of life tips for writing ChoiceScript, especially in Sublime.
+
+- **Use Dropbox for your files!** Dropbox is free and easy to access across every device and operating system. Keeping your ChoiceScript scene files in a Dropbox folder ensures that you will *never* lose your files, and because of its version history feature, it's easy to go back to an older version of your file if you've made a mistake.
+
+- **Get a word count plugin for Sublime.** This is easily done through Package Control. Simple open Command Palette, type in "WordCount" and install the [top result](https://packagecontrol.io/packages/WordCount). This will add a word count to the bottom left corner of the Sublime window. The plugin counts *all* words, including command lines, and you cannot quickly find out the total word count for a project without manually adding the word counts together.
+
+- **Take advantage of columns and split view in Sublime.** Sublime lets your open multiple columns (View > Layout), so you can view two files at once. These can be two separate files or the same file (split view). To use split view, go to File > Split View. You may need to adjust the layout, but it's very easy to do.
+
+- **Use CSIDE.** Opting to use [CSIDE](https://github.com/ChoicescriptIDE/main/releases) instead of downloading the [ChoiceScript folder](https://github.com/dfabulich/choicescript) from Github can make working with ChoiceScript easier. CSIDE has basic ChoiceScript syntax highlighting, a copy of ChoiceScript and its tests built into it, and has a good word count feature that excludes command lines and will look at the word count for your overall project -- and it has a browser version, so you don't need to download anything. It *also* has a console, which you can read about in its documentation.
+
+- **Use CSIDE and Sublime together.** Writing code in Sublime and then using CSIDE to test and make immediate bug fixes is a solid way to develop ChoiceScript games. You get the benefits of Sublime -- a more precise syntax highlighter and autocomplete commands -- and the advantages of CSIDE, such as its console. Sublime will update with any saved changes you make in CSIDE. CSIDE does not update immediately, so your options are to either open and close the scene file you're working on to force CSIDE to update or simply overwrite CSIDE files's text with a copy and paste of all your Sublime file's text.<br><br>You will have to be careful using this method so you don't accidentally overwrite your scene file's text in Sublime with an older version from CSIDE. In the event that does happen, if you're using Dropbox for your files, you can use the version history to recover whatever has been lost.
+
 ## :memo: Editing and Customization
 ##### ⚠️ You are free to edit/customize/modify/etc this syntax definition and color scheme as much as you like for public or private use, so long as you link back here and do not in any way derive profit from it.
 
@@ -141,7 +156,7 @@ This is a quick overview on how to edit and customize the syntax definition, its
 3. Using the [Sublime Documentation](https://www.sublimetext.com/docs/color_schemes.html) and my color scheme code as a guide, customize the color scheme as you like. I have tried to be as clear and thorough as possible with my comments to explain what affects which parts of the syntax.
 4. Save it to your `/Packages/User` folder of your Sublime directory. Whatever changes you made will override my ChoiceScript color scheme.
 
-Creating an entirely new color scheme follows a similar process. Ensure that your color scheme code includes a name --- `"name": "Your Color Scheme"` --- above `"variables": {}`.
+Creating an entirely new color scheme follows a similar process. Ensure that your color scheme code includes a name -- `"name": "Your Color Scheme"` -- above `"variables": {}`.
 
 #### 🔸 Sublime 3
 Editing a color scheme in Sublime 3 is not nearly as straight-forward as it is in Sublime 4. I recommend updating, but if you'd prefer not to, follow the instructions below.
@@ -222,6 +237,13 @@ Like all syntax definitions in Sublime 3 and beyond, the ChoiceScript syntax def
 Creating an entirely new syntax definition is very easy. Go to Tools > Developer > New Syntax... and Sublime will open a new file set up for a syntax definition.
 
 I found the Oniguruma Regular Expression Document difficult to understand as I had no prior knowledge of regular expression. I found [this cheatsheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) helpful, though it is meant for *JavaScript* and not necessarily Sublime syntax definitions. Referencing both is the best route, but at the end of the day, the best way to figure it out is trial and error.
+
+## :iphone: Contact Me
+If you need to contact me directly for any reason relating to the ChoiceScript syntax, you can do so.
+
+**Discord:** Fawkes#4250<br>
+**COG Forum:** [Fawkes](https://forum.choiceofgames.com/u/fawkes/)<br>
+**Tumblr:** [@fantasyfawkes](https://www.fantasyfawkes.com/)
 
 ## :exclamation: Disclaimer
 This syntax highlighter is in no way affiliated with or endorsed by Choice of Games, LLC. It is indepedently created and maintained by Fawkes (E.S. Fawkes) as an aid for writers.
