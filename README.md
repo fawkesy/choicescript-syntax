@@ -31,14 +31,8 @@ It does not include a copy of ChoiceScript. It cannot run QuickTest or RandomTes
 ## :hammer_and_wrench: Installation
 The ChoiceScript syntax can be installed one of two ways, regardless of whether you're using Sublime 3 or 4:
 
-### 📦 Package Control
-1. In Sublime, go to Tools > Install Package Control...
-2. Open the Command Palette by pressing (MAC) CMD + Shift + P **OR** (PC) CTRL + Shift + P.
-3. Type `Package Control: Install Package` into the Command Palette.
-4. In the new Package Control window, type `ChoiceScript` with no spaces.
-5. Select "ChoiceScript" to install the syntax and color scheme.
-6. On a `.txt` scene file, go to the bottom right of the Sublime window where it says "Plain Text." Click it and select "ChoiceScript" from the list of syntaxes.
-7. You're now ready to write ChoiceScript in Sublime!
+### 📦 Package Control (COMING SOON)
+This option is coming soon!
 
 ### 🛠 Manual Installation
 1. On this repository, click "Code" above the files.
