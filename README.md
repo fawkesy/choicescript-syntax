@@ -47,7 +47,7 @@ The ChoiceScript syntax can be installed one of two ways, regardless of whether 
 6. In Sublime, on a `.txt` scene file, go to the bottom right of the Sublime window where it says "Plain Text." Click it and select "ChoiceScript" from the list of syntaxes.
 7. You're now ready to write ChoiceScript in Sublime!
 
-#### Using the Color Scheme
+#### 🌈 Using the Color Scheme
 1. Go to (MAC) Sublime Text > Preferences > Select Color Scheme **OR** (PC) Preferences > Select Color Scheme. (On Sublime 3, it's "Color Scheme...")
 2. Select the "ChoiceScript" color scheme.
 3. You're now all set with the ChoiceScript syntax highlighter and custom color scheme!
