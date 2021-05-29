@@ -118,7 +118,7 @@ If need or desire ever arises, more autocomplete commands may be added in the fu
 This is a quick overview on how to edit and customize the syntax definition, its settings, and/or the color scheme, as well as how to create your own color scheme.
 
 ### :art: Color Scheme
-#### Sublime 4
+#### 🔹 Sublime 4
 1. (MAC) Sublime Text > Preferences > Customize Color Scheme. (PC) Preferences > Customize Color Scheme.
 2. This will open a new window. On the left is the ChoiceScript color scheme I made, and on the right is a blank `.sublime-color-scheme` file.
 3. Using the [Sublime Documentation](https://www.sublimetext.com/docs/color_schemes.html) and my color scheme code as a guide, customize the color scheme as you like. I have tried to be as clear and thorough as possible with my comments to explain what affects which parts of the syntax.
@@ -126,7 +126,7 @@ This is a quick overview on how to edit and customize the syntax definition, its
 
 Creating an entirely new color scheme follows a similar process. Ensure that your color scheme code includes a name --- `"name": "Your Color Scheme"` --- above `"variables": {}`.
 
-#### Sublime 3
+#### 🔸 Sublime 3
 Editing a color scheme in Sublime 3 is not nearly as straight-forward as it is in Sublime 4. I recommend updating, but if you'd prefer not to, follow the instructions below.
 
 1. Ensure that you have at least downloaded the `ChoiceScript.sublime-color-scheme` file via the [Manual Installation](#-manual-installation) option.
