@@ -10,15 +10,15 @@ It is compatible with **Sublime 3** and **4**.
 It does not include a copy of ChoiceScript. It cannot run QuickTest or RandomTest. It does not check for bugs or errors. It does not include a word count. You **must** have a copy of [ChoiceScript](https://github.com/dfabulich/choicescript) (or [CSIDE](https://github.com/ChoicescriptIDE/main/releases)) on your computer or use the [web version of CSIDE](https://choicescriptide.github.io/web/) to run your game.
 
 ## 📖 Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Color Scheme](#color-scheme)
-- [Screenshots](#screenshots)
-- [Autocomplete Commands](#autocomplete-commands)
-- [Editing and Customization](#editing-and-customization)
-- [Disclaimer](#disclaimer)
+- [Features](#gem-features)
+- [Installation](#hammer_and_wrench-installation)
+- [Color Scheme](#art-color-scheme)
+- [Screenshots](#camera_flash-screenshots)
+- [Autocomplete Commands](#zap-autocomplete-commands)
+- [Editing and Customization](#memo-editing-and-customization)
+- [Disclaimer](#exclamation-disclaimer)
 
-## Features
+## :gem: Features
 - Custom syntax highlighting for the ChoiceScript language.
 - Full support for multireplace and stat charts.
 - Custom color scheme for enhanced syntax highlighting.
@@ -26,16 +26,16 @@ It does not include a copy of ChoiceScript. It cannot run QuickTest or RandomTes
 - Spell check for plain text and text for choice options and text in multireplace.
 - Word wrap automatically enabled, tabs to indent conversion (for CSIDE compatiblity) enabled, auto match disabled (to keep from matching quotes).
 
-## Installation
+## :hammer_and_wrench: Installation
 The ChoiceScript syntax can be installed one of two ways.
-
-### 🛠 Manual Installation
-1. ddd
 
 ### 📦 Package Control (recommended)
 1. ddd
 
-## Color Scheme
+### 🛠 Manual Installation
+1. ddd
+
+## :art: Color Scheme
 Included is an optional color scheme designed for the syntax. Since it was created for this specific syntax definition, it is able to target more specific parts of code to allow for enhanced highlighting.
 
 It recognizes:
@@ -50,10 +50,26 @@ It recognizes:
 
 Some of this does carry over rather well to other color schemes, but the custom color scheme was designed alongside the syntax highlighter to highlight with greater thoroughness and accuracy for ChoiceScript.
 
-## Screenshots
+### ⚙️ Using the color scheme JUST for ChoiceScript
+If you want to use the ChoiceScript color scheme *only* with ChoiceScript files, you can do so by following these steps:
+
+1. With your ChoiceScript file active on Sublime, go to (MAC) Sublime Text > Preferences > Settings - Syntax Specific **OR** (PC) Preferences > Settings - Syntax Specific
+2. A new window will open. On the left is the full range of Sublime settings you can configure. On the right is the settings configuration for that specific syntax.
+3. In the file on the right, edit the file to look like this:
+
+```
+{
+	"color_scheme": "ChoiceScript.sublime-color-scheme",
+}
+```
+4. Save.
+
+From now on, all files with ChoiceScript syntax will use the ChoiceScript color scheme, regardless of what your theme or overall color scheme is in the rest of Sublime.
+
+## :camera_flash: Screenshots
 Below are screenshots of the syntax, with and without the color scheme, featuring scene files from Choice of Games' [Choice of the Dragon](https://www.choiceofgames.com/dragon/) and my own project.
 
-### 💎 Without the Color Scheme
+### ✨ Without the Color Scheme
 *Click for full size.*
 
 Sublime's Mariana | One Dark Gravity
@@ -66,26 +82,22 @@ Solarized Light | Solarized Dark
 <img alt="Solarized Light" src="https://user-images.githubusercontent.com/33694865/120052820-d1530c80-bfec-11eb-864b-dfffa547d5c3.png">|<img alt="Solarized Dark" src="https://user-images.githubusercontent.com/33694865/120052823-d1eba300-bfec-11eb-9491-ae385cf6c554.png">
 <img alt="Solarized Light2" src="https://user-images.githubusercontent.com/33694865/120053108-0b70de00-bfee-11eb-9da1-b84ff6e1a6be.png">|<img alt="Solarized Dark2" src="https://user-images.githubusercontent.com/33694865/120053106-0ad84780-bfee-11eb-99b8-fcc7edf2a2e2.png">
 
-### 🎨 With the Color Scheme
+### :sparkles: With the Color Scheme
 *Click for full size.*
 
 Choice of the Dragon | Choice of the Dragon | Multireplace Example
 -------------------- | -------------------- | --------------------
 <img alt="Custom1" src="https://user-images.githubusercontent.com/33694865/120052568-8f759680-bfeb-11eb-92dd-7f8d26eb50ad.png">|<img alt="Custom2" src="https://user-images.githubusercontent.com/33694865/120052891-2b53d200-bfed-11eb-9e47-c63be428005c.png">|<img alt="Custom3" src="https://user-images.githubusercontent.com/33694865/120053102-0875ed80-bfee-11eb-8962-d422ceb2769d.png">
 
-If you want to use the ChoiceScript color scheme *only* with ChoiceScript files, you can do so by following these steps:
-
-1. ddd
-
-## Autocomplete Commands
+## :zap: Autocomplete Commands
 The syntax includes some autocomplete commands written in an attempt to help writers quickly write common lines of ChocieScript code.
 
-## Editing and Customization
+## :memo: Editing and Customization
 This is a brief guide on how to edit and customize the syntax, its settings, and/or the color scheme, as well as how to create your own color scheme.
 
 ##### ⚠️ You are free to edit/customize/modify/etc this syntax definition and color scheme as much as you like for public or private use, so long as you link back here and do not in any way derive profit from it.
 
-## Disclaimer
+## :exclamation: Disclaimer
 This syntax highlighter is in no way affiliated with or endorsed by Choice of Games, LLC. It is indepedently created and maintained by Fawkes (E.S. Fawkes) as an aid for writers.
 
 ChoiceScript is &copy; D. Fabulich.
