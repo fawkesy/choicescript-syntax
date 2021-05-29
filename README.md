@@ -113,24 +113,95 @@ Startup.txt Header | `cs_header` | <img width="448" alt="cs_header" src="https:/
 If need or desire ever arises, more autocomplete commands may be added in the future.
 
 ## :memo: Editing and Customization
-This is a quick overview on how to edit and customize the syntax, its settings, and/or the color scheme, as well as how to create your own color scheme.
+##### ⚠️ You are free to edit/customize/modify/etc this syntax definition and color scheme as much as you like for public or private use, so long as you link back here and do not in any way derive profit from it.
 
-### Color Scheme
+This is a quick overview on how to edit and customize the syntax definition, its settings, and/or the color scheme, as well as how to create your own color scheme.
+
+### :art: Color Scheme
 #### Sublime 4
 1. (MAC) Sublime Text > Preferences > Customize Color Scheme. (PC) Preferences > Customize Color Scheme.
 2. This will open a new window. On the left is the ChoiceScript color scheme I made, and on the right is a blank `.sublime-color-scheme` file.
-3. Using the [Sublime Documentation](https://www.sublimetext.com/docs/color_schemes.html) and my color scheme code as a guide, customize the color scheme as you like. I have tried to be as thorough in my comments as possible to explain what affects which parts of the syntax.
+3. Using the [Sublime Documentation](https://www.sublimetext.com/docs/color_schemes.html) and my color scheme code as a guide, customize the color scheme as you like. I have tried to be as clear and thorough as possible with my comments to explain what affects which parts of the syntax.
 4. Save it to your `/Packages/User` folder of your Sublime directory. Whatever changes you made will override my ChoiceScript color scheme.
 
-Creating an entirely new color scheme follows a similar process. Ensure that your color scheme code includes a name --- `"name": "Your Color Scheme"` --- above `"variables"`.
+Creating an entirely new color scheme follows a similar process. Ensure that your color scheme code includes a name --- `"name": "Your Color Scheme"` --- above `"variables": {}`.
 
 #### Sublime 3
 Editing a color scheme in Sublime 3 is not nearly as straight-forward as it is in Sublime 4. I recommend updating, but if you'd prefer not to, follow the instructions below.
 
-1. Ensure that you have downloaded the files as instructed by the [Manual Installation](#hammer_and_wrench-manual-installation) section.
+1. Ensure that you have at least downloaded the `ChoiceScript.sublime-color-scheme` file via the [Manual Installation](#-manual-installation) option.
+2. In Sublime, open `ChoiceScript.sublime-color-scheme`. You can edit this file directly to make changes to the color scheme.
+3. Using the [Sublime Documentation](https://www.sublimetext.com/docs/color_schemes.html) and my color scheme code as a guide, customize the color scheme as you like. I have tried to be as clear and thorough as possible with my comments to explain what affects which parts of the syntax.
+4. Save, either as a new file with the `.sublime-color-scheme` extension in the `/Packages/User` folder of your Sublime directly or simply save it as `ChoiceScript.sublime-color-scheme` to completely overwrite my color scheme.
 
+Creating an entirely new color scheme is an almost indentical process. Simply save it as an entirely new file with a different name and ensure that the code includes a name --- `"name": "Your Color Scheme"` --- above `"variables": {}`.
 
-##### ⚠️ You are free to edit/customize/modify/etc this syntax definition and color scheme as much as you like for public or private use, so long as you link back here and do not in any way derive profit from it.
+### :gear: Syntax-Specific Settings
+Modifying syntax-specific settings in Sublime is very easy.
+
+1. (MAC) Sublime Text > Preferences > Settings - Syntax Specific. (PC) Preferences > Settings - Syntax Specific.
+2. A new window will open will two files. One the left is a read-only file that list all possible settings you can modify and their default value in Sublime. On the right is a new syntax-specific settings file that will override all other settings, including the ones I have set for `ChoiceScript.sublime-settings`.
+3. Using the file on the left as a guide, write your new settings for the ChoiceScript syntax.
+4. Save.
+
+Alternatively, if you have downloaded the `ChoiceScript.sublime-settings` files via [Manual Installation](#-manual-installation), you can edit the settings I've set directly. I have included comments in the files for that purpose.
+
+Below are the settings I've set for the ChoiceScript syntax:
+```
+{
+		// remove or comment out to disable
+		// if you want to use your default scheme
+		// or one of the other choicescript schemes
+	//"color_scheme": "Packages/User/ChoiceScript.sublime-color-scheme",
+
+		// change to false to disable entirely
+	"auto_complete": true,
+
+		// scope for cs_ command autocompletes
+	"auto_complete_selector": "keyword.trigger",
+
+		// change to false to disable entirely
+	"spell_check": true,
+
+		// so it only spell checks plain text and
+		// text in multireplace and choice options
+	"spelling_selector": "string.text, -(comment, entity, keyword, variable, storage)",
+
+		// general quality of life and compatibility
+		// stuff so your code works in other editors
+	"word_wrap": true,
+	"tab_size": 2,
+	"detect_indentation": true,
+	"auto_indent": true,
+	"smart_indent": true,
+	"use_tab_stops": true,
+	"translate_tabs_to_spaces": true,
+	"margin": 7,
+
+		// makes the caret blink
+	"caret_style": "blink",
+
+		// lets you scroll past the last line in a
+		// file to making writing final lines more
+		// comfortable
+	"scroll_past_end": true,
+
+		// disabled so it doesn't match quotes
+	"auto_match_enabled": false,
+}
+```
+
+### 💾 Syntax Definition
+Like all syntax definitions in Sublime 3 and beyond, the ChoiceScript syntax definition uses YAML, which is remarkably straight forward and intuitive, and RegEx (regular expression) which is less so. I'm not going in-depth on how to write in regular expression or how to write a new syntax definition, but I'll briefly go over how you can edit my syntax definition or create your own and link to some resources.
+
+1. Ensure that you have at least downloaded the `ChoiceScript.sublime-syntax` file via the [Manual Installation](#-manual-installation) option.
+2. In Sublime, open `ChoiceScript.sublime-syntax`. You can edit this file directly to modify the syntax definition.
+3. Using the [Sublime Documentation](http://www.sublimetext.com/docs/syntax.html) and [Oniguruma Regular Expressions](https://raw.githubusercontent.com/kkos/oniguruma/5.9.6/doc/RE), modify the syntax definition as you please. **Note:** This is my first syntax definition. I have probably done a lot wrong, I'm sure, so I don't recommend using my syntax definition as a guide on how syntax definitions are supposed to look/work.
+4. Save, either as a new file with the `.sublime-color-scheme` extension in the `/Packages/User` folder of your Sublime directory or simply save it as `ChoiceScript.sublime-syntax` to completely overwrite my syntax definition.
+
+Creating an entirely new syntax definition is very easy. Go to Tools > Developer > New Syntax... and Sublime will open a new file set up for a syntax definition.
+
+I found the Oniguruma Regular Expression Document difficult to understand as I had no prior knowledge of regular expression. I found [this cheatsheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) helpful, though it is meant for *JavaScript* and not necessarily Sublime syntax definitions. Referencing both is the best route, but at the end of the day, the best way to figure it out is trial and error.
 
 ## :exclamation: Disclaimer
 This syntax highlighter is in no way affiliated with or endorsed by Choice of Games, LLC. It is indepedently created and maintained by Fawkes (E.S. Fawkes) as an aid for writers.
