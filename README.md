@@ -196,7 +196,10 @@ Like all syntax definitions in Sublime 3 and beyond, the ChoiceScript syntax def
 
 1. Ensure that you have at least downloaded the `ChoiceScript.sublime-syntax` file via the [Manual Installation](#-manual-installation) option.
 2. In Sublime, open `ChoiceScript.sublime-syntax`. You can edit this file directly to modify the syntax definition.
-3. Using the [Sublime Documentation](http://www.sublimetext.com/docs/syntax.html) and [Oniguruma Regular Expressions](https://raw.githubusercontent.com/kkos/oniguruma/5.9.6/doc/RE), modify the syntax definition as you please. **Note:** This is my first syntax definition. I have probably done a lot wrong, I'm sure, so I don't recommend using my syntax definition as a guide on how syntax definitions are supposed to look/work.
+3. Using the [Sublime Documentation](http://www.sublimetext.com/docs/syntax.html) and [Oniguruma Regular Expressions](https://raw.githubusercontent.com/kkos/oniguruma/5.9.6/doc/RE), modify the syntax definition as you please.
+
+**Note:** This is my first syntax definition. I have probably done a lot wrong, I'm sure, so I don't recommend using my syntax definition as a guide on how syntax definitions are supposed to look/work.
+
 4. Save, either as a new file with the `.sublime-color-scheme` extension in the `/Packages/User` folder of your Sublime directory or simply save it as `ChoiceScript.sublime-syntax` to completely overwrite my syntax definition.
 
 Creating an entirely new syntax definition is very easy. Go to Tools > Developer > New Syntax... and Sublime will open a new file set up for a syntax definition.
