@@ -50,7 +50,7 @@ It recognizes:
 
 Some of this does carry over rather well to other color schemes, but the custom color scheme was designed alongside the syntax highlighter to highlight with greater thoroughness and accuracy for ChoiceScript.
 
-### ⚙️ Using the color scheme JUST for ChoiceScript
+### ⚙️ Using the Color Scheme JUST for ChoiceScript
 If you want to use the ChoiceScript color scheme *only* with ChoiceScript files, you can do so by following these steps:
 
 1. With your ChoiceScript file active on Sublime, go to (MAC) Sublime Text > Preferences > Settings - Syntax Specific **OR** (PC) Preferences > Settings - Syntax Specific
@@ -72,12 +72,12 @@ Below are screenshots of the syntax, with and without the color scheme, featurin
 ### ✨ Without the Color Scheme
 *Click for full size.*
 
-Sublime's Mariana | One Dark Gravity
+Sublime's Mariana | [One Dark Gravity](https://packagecontrol.io/packages/Theme%20-%20Gravity)
 ----------------- | -----------------
 <img alt="Mariana" src="https://user-images.githubusercontent.com/33694865/120052569-900e2d00-bfeb-11eb-92a5-dc4f8bb19fc1.png">|<img alt="One Dark Gravity" src="https://user-images.githubusercontent.com/33694865/120052570-90a6c380-bfeb-11eb-9266-7f58db04fd67.png">
 <img alt="Mariana2" src="https://user-images.githubusercontent.com/33694865/120053103-09a71a80-bfee-11eb-8b89-9b5739e65af3.png">|<img alt="One Dark Gravity2" src="https://user-images.githubusercontent.com/33694865/120053104-0a3fb100-bfee-11eb-8565-c4dac24893af.png">
 
-Solarized Light | Solarized Dark
+[Solarized Light](https://packagecontrol.io/packages/Solarized%20Color%20Scheme) | [Solarized Dark](https://packagecontrol.io/packages/Solarized%20Color%20Scheme)
 --------------- | --------------
 <img alt="Solarized Light" src="https://user-images.githubusercontent.com/33694865/120052820-d1530c80-bfec-11eb-864b-dfffa547d5c3.png">|<img alt="Solarized Dark" src="https://user-images.githubusercontent.com/33694865/120052823-d1eba300-bfec-11eb-9491-ae385cf6c554.png">
 <img alt="Solarized Light2" src="https://user-images.githubusercontent.com/33694865/120053108-0b70de00-bfee-11eb-9da1-b84ff6e1a6be.png">|<img alt="Solarized Dark2" src="https://user-images.githubusercontent.com/33694865/120053106-0ad84780-bfee-11eb-99b8-fcc7edf2a2e2.png">
@@ -92,8 +92,43 @@ Choice of the Dragon | Choice of the Dragon | Multireplace Example
 ## :zap: Autocomplete Commands
 The syntax includes some autocomplete commands written in an attempt to help writers quickly write common lines of ChocieScript code.
 
+### ❔ How to Use
+All the autocomplete commands start with `cs_` and must either be at the beginning of a new line or following a whitespace, such as a space or tab. Upon entering `cs_`, Sublime will list all the available autocomplete commands. For the most part, you will only need to type in one or two characters after `cs_` for the right autocomplete. Sublime will commit to the autocomplete upon pressing `enter` or `tab`.
+
+### 📋 List of Commands
+
+Function | Trigger | Completion
+-------- | ------- | -----------
+Choice | `cs_ch` | <img width="448" alt="cs_ch" src="https://user-images.githubusercontent.com/33694865/120075916-d48bde00-c068-11eb-91fa-0e6235d38b67.png">
+Page Break | `cs_pb` | <img width="448" alt="cs_pb" src="https://user-images.githubusercontent.com/33694865/120075561-6a266e00-c067-11eb-8c8d-72d2879f07a8.png">
+Line Break | `cs_lb` | <img width="448" alt="cs_lb" src="https://user-images.githubusercontent.com/33694865/120075562-6a266e00-c067-11eb-8805-c40deb7f348d.png">
+Multireplace | `cs_mr` | <img width="448" alt="cs_mr" src="https://user-images.githubusercontent.com/33694865/120075559-6a266e00-c067-11eb-9de8-de4cccaa2079.png">
+If/Else | `cs_if` | <img width="448" alt="cs_if" src="https://user-images.githubusercontent.com/33694865/120075917-d5247480-c068-11eb-89e5-73e42492887d.png">
+Comment | `cs_om` | <img width="448" alt="cs_om" src="https://user-images.githubusercontent.com/33694865/120075558-698dd780-c067-11eb-987a-cf89198609b4.png">
+Stat Chart | `cs_st` | <img width="448" alt="cs_st" src="https://user-images.githubusercontent.com/33694865/120075721-0d778300-c068-11eb-87b7-45d509341429.png">
+Horizontal Rule | `cs_hr` | <img width="448" alt="cs_hr" src="https://user-images.githubusercontent.com/33694865/120075557-698dd780-c067-11eb-939d-d43b0f8c7faf.png">
+Implicit Control Flow | `cs_imp` | <img width="448" alt="cs_imp" src="https://user-images.githubusercontent.com/33694865/120075560-6a266e00-c067-11eb-96b3-6dde1e2ea378.png">
+Startup.txt Header | `cs_header` | <img width="448" alt="cs_header" src="https://user-images.githubusercontent.com/33694865/120075565-6abf0480-c067-11eb-933e-b5f5c489b70b.png">
+
+If need or desire ever arises, more autocomplete commands may be added in the future.
+
 ## :memo: Editing and Customization
-This is a brief guide on how to edit and customize the syntax, its settings, and/or the color scheme, as well as how to create your own color scheme.
+This is a quick overview on how to edit and customize the syntax, its settings, and/or the color scheme, as well as how to create your own color scheme.
+
+### Color Scheme
+#### Sublime 4
+1. (MAC) Sublime Text > Preferences > Customize Color Scheme. (PC) Preferences > Customize Color Scheme.
+2. This will open a new window. On the left is the ChoiceScript color scheme I made, and on the right is a blank `.sublime-color-scheme` file.
+3. Using the [Sublime Documentation](https://www.sublimetext.com/docs/color_schemes.html) and my color scheme code as a guide, customize the color scheme as you like. I have tried to be as thorough in my comments as possible to explain what affects which parts of the syntax.
+4. Save it to your `/Packages/User` folder of your Sublime directory. Whatever changes you made will override my ChoiceScript color scheme.
+
+Creating an entirely new color scheme follows a similar process. Ensure that your color scheme code includes a name --- `"name": "Your Color Scheme"` --- above `"variables"`.
+
+#### Sublime 3
+Editing a color scheme in Sublime 3 is not nearly as straight-forward as it is in Sublime 4. I recommend updating, but if you'd prefer not to, follow the instructions below.
+
+1. Ensure that you have downloaded the files as instructed by the [Manual Installation](#hammer_and_wrench-manual-installation) section.
+
 
 ##### ⚠️ You are free to edit/customize/modify/etc this syntax definition and color scheme as much as you like for public or private use, so long as you link back here and do not in any way derive profit from it.
 
