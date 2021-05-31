@@ -9,7 +9,7 @@
 	"auto_complete": true,
 
 		// scope for cs_ command autocompletes
-	"auto_complete_selector": "keyword.trigger, entity.name",
+	"auto_complete_selector": "keyword.trigger",
 
 		// change to false to disable entirely
 	"spell_check": true,
