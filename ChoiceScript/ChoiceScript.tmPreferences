@@ -9,7 +9,7 @@
   <key>settings</key>
   <dict>
   	<key>increaseIndentPattern</key>
-      <string>(^|\s+)(\*choice|\*fake_choice|\*stat_chart|\*scene_list|((\*if|\*if not|\*else|\*elsif|\*elseif|#|opposed_pair|\*selectable_if)(.+|$)))*$</string>
+      <string>((^|\s+)(\*choice|\*fake_choice|\*stat_chart|\*scene_list|((\*if|\*if not|\*else|\*elsif|\*elseif|#|opposed_pair|\*selectable_if)(.+|$)))$)</string>
   </dict>
   <key>uuid</key>
   <string>5acdc068-3860-43dc-bcca-65e757e13327</string>
