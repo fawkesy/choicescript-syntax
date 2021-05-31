@@ -160,7 +160,7 @@ Editing a color scheme in Sublime 3 is not nearly as straight-forward as it is i
 3. Using the [Sublime Documentation](https://www.sublimetext.com/docs/color_schemes.html) and my color scheme code as a guide, customize the color scheme as you like. I have tried to be as clear and thorough as possible with my comments to explain what affects which parts of the syntax.
 4. Save, either as a new file with the `.sublime-color-scheme` extension in the `/Packages/User` folder of your Sublime directly or simply save it as `ChoiceScript.sublime-color-scheme` to completely overwrite my color scheme.
 
-Creating an entirely new color scheme is an almost indentical process. Simply save it as an entirely new file with a different name and ensure that the code includes a name --- `"name": "Your Color Scheme"` --- above `"variables": {}`.
+Creating an entirely new color scheme is an almost indentical process. Simply save it as an entirely new file with a different name and ensure that the code includes a name -- `"name": "Your Color Scheme"` -- above `"variables": {}`.
 
 ### :gear: Syntax-Specific Settings
 Modifying syntax-specific settings in Sublime is very easy.
