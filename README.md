@@ -25,8 +25,9 @@ It does not include a copy of ChoiceScript. It cannot run QuickTest or RandomTes
 - Full support for multireplace and stat charts.
 - Custom color scheme for enhanced syntax highlighting.
 - Autocomplete commands to quickly create common lines of code (page breaks, line breaks, choices, if/else statements, stat charts, comments, etc).
+- Auto-indent following appropriate lines of code (`*choice`, `#options`, `*if/else`, `*stat_chart`).
 - Spell check for plain text and text for choice options and text in multireplace.
-- Word wrap automatically enabled, tabs to indent conversion (for CSIDE compatiblity) enabled, auto match disabled (to keep from matching quotes).
+- Word wrap automatically enabled, tabs to indent conversion enabled, auto match disabled (to keep from matching quotes).
 
 ## :hammer_and_wrench: Installation
 The ChoiceScript syntax can be installed one of two ways, regardless of whether you're using Sublime 3 or 4:
@@ -133,6 +134,12 @@ These are some general quality of life tips for writing ChoiceScript, especially
 - **Get a word count plugin for Sublime.** This is easily done through Package Control. Simple open Command Palette, type in "WordCount" and install the [top result](https://packagecontrol.io/packages/WordCount). This will add a word count to the bottom left corner of the Sublime window. The plugin counts *all* words, including command lines, and you cannot quickly find out the total word count for a project without manually adding the word counts together.
 
 - **Take advantage of columns and split view in Sublime.** Sublime lets your open multiple columns (View > Layout), so you can view two files at once. These can be two separate files or the same file (split view). To use split view, go to File > Split View. You may need to adjust the layout, but it's very easy to do.
+
+- **Use keybindings for em dashes and ellipsis.** If you'd prefer your writing to use proper em dashes, "—", or ellipsis, "…", it is very easy to set Sublime up to automatically convert "--" and "..." for you using keybindings. Go to (MAC) Sublime Text > Preferences > Key Bindings **OR** (PC) Preferences > Key Bindings. A new window will pop up with two files. Copy and paste the following into the file on the right between the `[]` brackets and save:
+```
+	{ "keys": ["-", "-"], "command": "insert_snippet", "args": {"contents": "—"} },
+	{ "keys": [".", ".", "."], "command": "insert_snippet", "args": {"contents": "…"} },
+```
 
 - **Use CSIDE.** Opting to use [CSIDE](https://github.com/ChoicescriptIDE/main/releases) instead of downloading the [ChoiceScript folder](https://github.com/dfabulich/choicescript) from Github can make working with ChoiceScript easier. CSIDE has basic ChoiceScript syntax highlighting, a copy of ChoiceScript and its tests built into it, and has a good word count feature that excludes command lines and will look at the word count for your overall project -- and it has a browser version, so you don't need to download anything. It *also* has a console, which you can read about in its documentation.
 
