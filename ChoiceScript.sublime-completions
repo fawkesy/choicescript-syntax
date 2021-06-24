@@ -5,37 +5,37 @@
 		{
 			"trigger": "cs_ch",
 			"annotation": "new choice",
-			"contents": "*choice\n	#Text\n		*goto ",
+			"contents": "*choice\n\t#Text\n\t\t*goto ",
 			"kind": "snippet",
-			"details": "Create a new *choice",
+			"details": "Create a new *choice"
 		},
 		{
 			"trigger": "cs_pb",
 			"annotation": "page break",
 			"contents": "*page_break",
 			"kind": "keyword",
-			"details": "Create a new page break",
+			"details": "Create a new page break"
 		},
 		{
 			"trigger": "cs_lb",
 			"annotation": "line break",
 			"contents": "*line_break",
 			"kind": "keyword",
-			"details": "Create a new line break",
+			"details": "Create a new line break"
 		},
 		{
 			"trigger": "cs_mr",
 			"annotation": "multireplace",
 			"contents": "@{(var) value1|value2}",
 			"kind": "keyword",
-			"details": "Create a new multireplace",
+			"details": "Create a new multireplace"
 		},
 		{
 			"trigger": "cs_if",
 			"annotation": "if/else",
-			"contents": "*if (var)\n	text\n*elseif (var)\n	text\n*else\n	text",
+			"contents": "*if (var)\n\ttext\n*elseif (var)\n\ttext\n*else\n\ttext",
 			"kind": "snippet",
-			"details": "Create a new if/else statement",
+			"details": "Create a new if/else statement"
 		},
 		{
 			"trigger": "cs_om",
@@ -47,30 +47,30 @@
 		{
 			"trigger": "cs_st",
 			"annotation": "stat chart",
-			"contents": "*stat_chart\n	text Var\n	percent Var2\n	opposed_pair Var3\n		Var3Alt",
+			"contents": "*stat_chart\n\ttext Var\n\tpercent Var2\n\topposed_pair Var3\n\t\tVar3Alt",
 			"kind": "snippet",
-			"details": "Create a basic stat chart",
+			"details": "Create a basic stat chart"
 		},
 		{
 			"trigger": "cs_hr",
 			"annotation": "comment line",
 			"contents": "*comment ========================================",
 			"kind": "keyword",
-			"details": "Create a comment horizontal rule",
+			"details": "Create a comment horizontal rule"
 		},
 		{
 			"trigger": "cs_imp",
 			"annotation": "implicit control flow",
 			"contents": "*create implicit_control_flow true",
 			"kind": "snippet",
-			"details": "Enable implicit control flow",
+			"details": "Enable implicit control flow"
 		},
 		{ 
 			"trigger": "cs_header",
 			"annotation": "startup header",
-			"contents": "*title Title\n*author Name\n*scene_list\n	scene",
+			"contents": "*title Title\n*author Name\n*scene_list\n\tscene",
 			"kind": "snippet",
-			"details": "Header text for ChoiceScript startup.txt",
-		},
+			"details": "Header text for ChoiceScript startup.txt"
+		}
 	]
 }
