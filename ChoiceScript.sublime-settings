@@ -1,0 +1,42 @@
+// These settings override both User and Default settings for the Choicescript syntax
+{
+		// remove or comment out to disable
+		// if you want to use your default scheme
+		// or one of the other choicescript schemes
+	//"color_scheme": "Packages/User/ChoiceScript.sublime-color-scheme",
+
+		// change to false to disable entirely
+	"auto_complete": true,
+
+		// scope for cs_ command autocompletes
+	"auto_complete_selector": "keyword.trigger",
+
+		// change to false to disable entirely
+	"spell_check": true,
+
+		// so it only spell checks plain text and
+		// text in multireplace and choice options
+	"spelling_selector": "string.text, -(comment, entity, keyword, variable, storage)",
+
+		// general quality of life and compatibility
+		// stuff so your code works in other editors
+	"word_wrap": true,
+	"tab_size": 2,
+	"detect_indentation": true,
+	"auto_indent": true,
+	"smart_indent": true,
+	"use_tab_stops": true,
+	"translate_tabs_to_spaces": true,
+	"margin": 7,
+
+		// makes the caret blink
+	"caret_style": "blink",
+
+		// lets you scroll past the last line in a
+		// file to making writing final lines more
+		// comfortable
+	"scroll_past_end": true,
+
+		// disabled so it doesn't match quotes
+	"auto_match_enabled": false,
+}

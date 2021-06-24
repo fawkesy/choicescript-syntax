@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Comments</string>
+  <key>scope</key>
+  <string>plain.cs</string>
+  <key>settings</key>
+  <dict>
+  	<key>increaseIndentPattern</key>
+      <string>((^|\s+)(\*choice|\*fake_choice|\*stat_chart|\*scene_list|((\*if|\*if not|\*else|\*elsif|\*elseif|#|opposed_pair|\*selectable_if)(.+|$)))$)</string>
+  </dict>
+  <key>uuid</key>
+  <string>5acdc068-3860-43dc-bcca-65e757e13327</string>
+</dict>
+</plist>
