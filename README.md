@@ -40,7 +40,7 @@ This option is coming soon!
 2. Select "Download ZIP" and if prompted, choose where to save the folder.
 3. Extract the contents of the zipped folder.
 4. In Sublime, go to (MAC) Sublime Text > Preferences > Browse Packages... **OR** (PC) Preferences > Browse Packages... to open your Sublime `Packages` folder.
-5. Either copy and paste the extracted `ChoiceScript` folder directly into the `Packages` folder **OR** go up a level to the `Sublime Text` folder, open `Installed Packages`, and copy and paste the extracted `ChoiceScript.sublime-package` into it.
+5. Copy and paste the extracted `ChoiceScript` files directly into the `Packages` folder.
 6. In Sublime, on a `.txt` scene file, go to the bottom right of the Sublime window where it says "Plain Text." Click it and select "ChoiceScript" from the list of syntaxes.
 7. You're now ready to write ChoiceScript in Sublime!
 
@@ -146,7 +146,7 @@ These are some general quality of life tips for writing ChoiceScript, especially
 - **Use CSIDE and Sublime together.** Writing code in Sublime and then using CSIDE to test and make immediate bug fixes is a solid way to develop ChoiceScript games. You get the benefits of Sublime -- a more precise syntax highlighter and autocomplete commands -- and the advantages of CSIDE, such as its console. Sublime will update with any saved changes you make in CSIDE. CSIDE does not update on its own, but it is very easy to reload scene files, either by right clicking on the file you wish to reload in the left sidebar or going to Project > Reload All Files.<br><br>In the event you make a mistake while saving in either program and accidentally lose anything, if you're storing your files on Dropbox, it's very easy to recover lost content using version history.
 
 ## :memo: Editing and Customization
-##### ⚠️ You are free to edit/customize/modify/etc this syntax definition and color scheme as much as you like for public or private use, so long as you link back here and do not in any way derive profit from it.
+##### ⚠️ This syntax definition and color scheme are provided under the [MIT license](https://tldrlegal.com/license/mit-license).
 
 This is a quick overview on how to edit and customize the syntax definition, its settings, and/or the color scheme, as well as how to create your own color scheme.
 
@@ -242,7 +242,7 @@ I found the Oniguruma Regular Expression Document difficult to understand as I h
 ## :iphone: Contact Me
 If you need to contact me directly for any reason relating to the ChoiceScript syntax, you can do so.
 
-**Discord:** Fawkes#4250<br>
+**Discord:** Fawkes#4253<br>
 **COG Forum:** [Fawkes](https://forum.choiceofgames.com/u/fawkes/)<br>
 **Tumblr:** [@fantasyfawkes](https://www.fantasyfawkes.com/)
 
