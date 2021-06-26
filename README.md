@@ -142,6 +142,7 @@ These are some general quality of life tips for writing ChoiceScript, especially
 - **Take advantage of columns and split view in Sublime.** Sublime lets your open multiple columns (View > Layout), so you can view two files at once. These can be two separate files or the same file (split view). To use split view, go to File > Split View. You may need to adjust the layout, but it's very easy to do.
 
 - **Use keybindings for em dashes and ellipsis.** If you'd prefer your writing to use proper em dashes, "—", or ellipsis, "…", it is very easy to set Sublime up to automatically convert "--" and "..." for you using keybindings. Go to (MAC) Sublime Text > Preferences > Key Bindings **OR** (PC) Preferences > Key Bindings. A new window will pop up with two files. Copy and paste the following into the file on the right between the `[]` brackets and save:
+
 ```
 	{ "keys": ["-", "-"], "command": "insert_snippet", "args": {"contents": "—"} },
 	{ "keys": [".", ".", "."], "command": "insert_snippet", "args": {"contents": "…"} },
@@ -185,6 +186,7 @@ Modifying syntax-specific settings in Sublime is very easy.
 Alternatively, if you have downloaded the `ChoiceScript.sublime-settings` files via [Manual Installation](#-manual-installation), you can edit the settings I've set directly. I have included comments in the files for that purpose.
 
 Below are the settings I've set for the ChoiceScript syntax:
+
 ```
 {
 		// remove or comment out to disable
