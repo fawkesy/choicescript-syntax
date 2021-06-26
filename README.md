@@ -140,7 +140,6 @@ These are some general quality of life tips for writing ChoiceScript, especially
 	{ "keys": ["-", "-"], "command": "insert_snippet", "args": {"contents": "—"} },
 	{ "keys": [".", ".", "."], "command": "insert_snippet", "args": {"contents": "…"} },
 ```
-
 - **Use CSIDE.** Opting to use [CSIDE](https://github.com/ChoicescriptIDE/main/releases) instead of downloading the [ChoiceScript folder](https://github.com/dfabulich/choicescript) from Github can make working with ChoiceScript easier. CSIDE has basic ChoiceScript syntax highlighting, a copy of ChoiceScript and its tests built into it, and has a good word count feature that excludes command lines and will look at the word count for your overall project -- and it has a browser version, so you don't need to download anything. It *also* has a console, which you can read about in its documentation.
 
 - **Use CSIDE and Sublime together.** Writing code in Sublime and then using CSIDE to test and make immediate bug fixes is a solid way to develop ChoiceScript games. You get the benefits of Sublime -- a more precise syntax highlighter and autocomplete commands -- and the advantages of CSIDE, such as its console. Sublime will update with any saved changes you make in CSIDE. CSIDE does not update on its own, but it is very easy to reload scene files, either by right clicking on the file you wish to reload in the left sidebar or going to Project > Reload All Files.<br><br>In the event you make a mistake while saving in either program and accidentally lose anything, if you're storing your files on Dropbox, it's very easy to recover lost content using version history.
@@ -223,7 +222,6 @@ Below are the settings I've set for the ChoiceScript syntax:
 	"auto_match_enabled": false,
 }
 ```
-
 ### 💾 Syntax Definition
 Like all syntax definitions in Sublime 3 and beyond, the ChoiceScript syntax definition uses YAML, which is remarkably straight forward and intuitive, and RegEx (regular expression) which is less so. I'm not going in-depth on how to write in regular expression or how to write a new syntax definition, but I'll briefly go over how you can edit my syntax definition or create your own and link to some resources.
 
