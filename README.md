@@ -9,18 +9,18 @@ It is compatible with **Sublime 3** and **4**.
 #### ⚠️ This is NOT an IDE like CSIDE.
 It does not include a copy of ChoiceScript. It cannot run QuickTest or RandomTest. It does not check for bugs or errors. It does not include a word count. You **must** have a copy of [ChoiceScript](https://github.com/dfabulich/choicescript) (or [CSIDE](https://github.com/ChoicescriptIDE/main/releases)) on your computer or use the [web version of CSIDE](https://choicescriptide.github.io/web/) to run your game.
 
-## 📖 Table of Contents
-- [Features](#gem-features)
-- [Installation](#hammer_and_wrench-installation)
-- [Color Scheme](#art-color-scheme)
-- [Screenshots](#camera_flash-screenshots)
-- [Autocomplete Commands](#zap-autocomplete-commands)
-- [ChoiceScript Tips](#bulb-choicescript-tips)
-- [Editing and Customization](#memo-editing-and-customization)
-- [Contact Me](#iphone-contact-me)
-- [Disclaimer](#exclamation-disclaimer)
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Color Scheme](#color-scheme)
+- [Screenshots](#screenshots)
+- [Autocomplete Commands](#autocomplete-commands)
+- [ChoiceScript Tips](#choicescript-tips)
+- [Editing and Customization](#editing-and-customization)
+- [Contact Me](#contact-me)
+- [Disclaimer](#disclaimer)
 
-## :gem: Features
+## Features
 - Custom syntax highlighting for the ChoiceScript language.
 - Full support for multireplace and stat charts.
 - Custom color scheme for enhanced syntax highlighting.
@@ -29,11 +29,17 @@ It does not include a copy of ChoiceScript. It cannot run QuickTest or RandomTes
 - Spell check for plain text and text for choice options and text in multireplace.
 - Word wrap automatically enabled, tabs to indent conversion enabled, auto match disabled (to keep from matching quotes).
 
-## :hammer_and_wrench: Installation
+## Installation
 The ChoiceScript syntax can be installed one of two ways, regardless of whether you're using Sublime 3 or 4:
 
-### 📦 Package Control (COMING SOON)
-This option is coming soon!
+### 📦 Package Control
+1. In Sublime, go to Tools > Install Package Control...
+2. Open the Command Palette by pressing (MAC) CMD + Shift + P **OR** (PC) CTRL + Shift + P.
+3. Type `Package Control: Install Package` into the Command Palette.
+4. In the new Package Control window, type `ChoiceScript` with no spaces.
+5. Select "ChoiceScript" to install the syntax and color scheme.
+6. On a `.txt` scene file, go to the bottom right of the Sublime window where it says "Plain Text." Click it and select "ChoiceScript" from the list of syntaxes.
+7. You're now ready to write ChoiceScript in Sublime!
 
 ### 🛠 Manual Installation
 1. On this repository, click "Code" above the files.
@@ -49,7 +55,7 @@ This option is coming soon!
 2. Select the "ChoiceScript" color scheme.
 3. You're now all set with the ChoiceScript syntax highlighter and custom color scheme!
 
-## :art: Color Scheme
+## Color Scheme
 Included is an optional color scheme designed for the syntax. Since it was created for this specific syntax definition, it is able to target more specific parts of code to allow for enhanced highlighting.
 
 It recognizes:
@@ -80,7 +86,7 @@ If you want to use the ChoiceScript color scheme *only* with ChoiceScript files,
 
 From now on, all files with ChoiceScript syntax will use the ChoiceScript color scheme, regardless of what your theme or overall color scheme is in the rest of Sublime.
 
-## :camera_flash: Screenshots
+## Screenshots
 Below are screenshots of the syntax, with and without the color scheme, featuring scene files from Choice of Games' [Choice of the Dragon](https://www.choiceofgames.com/dragon/) and my own project.
 
 ### ✨ Without the Color Scheme
@@ -96,14 +102,14 @@ Sublime's Mariana | [One Dark Gravity](https://packagecontrol.io/packages/Theme%
 <img alt="Solarized Light" src="https://user-images.githubusercontent.com/33694865/120052820-d1530c80-bfec-11eb-864b-dfffa547d5c3.png">|<img alt="Solarized Dark" src="https://user-images.githubusercontent.com/33694865/120052823-d1eba300-bfec-11eb-9491-ae385cf6c554.png">
 <img alt="Solarized Light2" src="https://user-images.githubusercontent.com/33694865/120053108-0b70de00-bfee-11eb-9da1-b84ff6e1a6be.png">|<img alt="Solarized Dark2" src="https://user-images.githubusercontent.com/33694865/120053106-0ad84780-bfee-11eb-99b8-fcc7edf2a2e2.png">
 
-### :sparkles: With the Color Scheme
+### ✨ With the Color Scheme
 *Click for full size.*
 
 Choice of the Dragon | Choice of the Dragon | Multireplace Example
 -------------------- | -------------------- | --------------------
 <img alt="Custom1" src="https://user-images.githubusercontent.com/33694865/120052568-8f759680-bfeb-11eb-92dd-7f8d26eb50ad.png">|<img alt="Custom2" src="https://user-images.githubusercontent.com/33694865/120052891-2b53d200-bfed-11eb-9e47-c63be428005c.png">|<img alt="Custom3" src="https://user-images.githubusercontent.com/33694865/120053102-0875ed80-bfee-11eb-8962-d422ceb2769d.png">
 
-## :zap: Autocomplete Commands
+## Autocomplete Commands
 The syntax includes some autocomplete commands written in an attempt to help writers quickly write common lines of ChocieScript code.
 
 ### ❔ How to Use
@@ -126,7 +132,7 @@ Startup.txt Header | `cs_header` | <img width="448" alt="cs_header" src="https:/
 
 If need or desire ever arises, more autocomplete commands may be added in the future.
 
-## :bulb: ChoiceScript Tips
+## ChoiceScript Tips
 These are some general quality of life tips for writing ChoiceScript, especially in Sublime.
 
 - **Use Dropbox for your files!** Dropbox is free and easy to access across every device and operating system. Keeping your ChoiceScript scene files in a Dropbox folder ensures that you will *never* lose your files, and because of its version history feature, it's easy to go back to an older version of your file if you've made a mistake.
@@ -144,12 +150,12 @@ These are some general quality of life tips for writing ChoiceScript, especially
 
 - **Use CSIDE and Sublime together.** Writing code in Sublime and then using CSIDE to test and make immediate bug fixes is a solid way to develop ChoiceScript games. You get the benefits of Sublime -- a more precise syntax highlighter and autocomplete commands -- and the advantages of CSIDE, such as its console. Sublime will update with any saved changes you make in CSIDE. CSIDE does not update on its own, but it is very easy to reload scene files, either by right clicking on the file you wish to reload in the left sidebar or going to Project > Reload All Files.<br><br>In the event you make a mistake while saving in either program and accidentally lose anything, if you're storing your files on Dropbox, it's very easy to recover lost content using version history.
 
-## :memo: Editing and Customization
+## Editing and Customization
 ##### ⚠️ This syntax definition and color scheme are provided under the [MIT license](https://tldrlegal.com/license/mit-license).
 
 This is a quick overview on how to edit and customize the syntax definition, its settings, and/or the color scheme, as well as how to create your own color scheme.
 
-### :art: Color Scheme
+### 🎨 Color Scheme
 #### 🔹 Sublime 4
 1. (MAC) Sublime Text > Preferences > Customize Color Scheme. (PC) Preferences > Customize Color Scheme.
 2. This will open a new window. On the left is the ChoiceScript color scheme I made, and on the right is a blank `.sublime-color-scheme` file.
@@ -168,7 +174,7 @@ Editing a color scheme in Sublime 3 is not nearly as straight-forward as it is i
 
 Creating an entirely new color scheme is an almost indentical process. Simply save it as an entirely new file with a different name and ensure that the code includes a name -- `"name": "Your Color Scheme"` -- above `"variables": {}`.
 
-### :gear: Syntax-Specific Settings
+### ⚙️ Syntax-Specific Settings
 Modifying syntax-specific settings in Sublime is very easy.
 
 1. (MAC) Sublime Text > Preferences > Settings - Syntax Specific. (PC) Preferences > Settings - Syntax Specific.
@@ -222,7 +228,7 @@ Below are the settings I've set for the ChoiceScript syntax:
 	"auto_match_enabled": false,
 }
 ```
-### 💾 Syntax Definition
+### 📝 Syntax Definition
 Like all syntax definitions in Sublime 3 and beyond, the ChoiceScript syntax definition uses YAML, which is remarkably straight forward and intuitive, and RegEx (regular expression) which is less so. I'm not going in-depth on how to write in regular expression or how to write a new syntax definition, but I'll briefly go over how you can edit my syntax definition or create your own and link to some resources.
 
 1. Ensure that you have at least downloaded the `ChoiceScript.sublime-syntax` file via the [Manual Installation](#-manual-installation) option.
@@ -237,14 +243,14 @@ Creating an entirely new syntax definition is very easy. Go to Tools > Developer
 
 I found the Oniguruma Regular Expression Document difficult to understand as I had no prior knowledge of regular expression. I found [this cheatsheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) helpful, though it is meant for *JavaScript* and not necessarily Sublime syntax definitions. Referencing both is the best route, but at the end of the day, the best way to figure it out is trial and error.
 
-## :iphone: Contact Me
+## Contact Me
 If you need to contact me directly for any reason relating to the ChoiceScript syntax, you can do so.
 
 **Discord:** Fawkes#4253<br>
 **COG Forum:** [Fawkes](https://forum.choiceofgames.com/u/fawkes/)<br>
 **Tumblr:** [@fantasyfawkes](https://www.fantasyfawkes.com/)
 
-## :exclamation: Disclaimer
+## Disclaimer
 This syntax highlighter is in no way affiliated with or endorsed by Choice of Games, LLC. It is indepedently created and maintained by Fawkes (E.S. Fawkes) as an aid for writers.
 
 ChoiceScript is &copy; D. Fabulich.
