@@ -6,224 +6,228 @@ scope: plain.cs
 contexts:
   main:
     - match: '\*comment'
-      scope: comment.line
+      scope: comment.line.choicescript
       comment: COMMENT
       push:
-        - meta_scope: comment.line
+        - meta_scope: comment.line.choicescript
         - match: '$'
           pop: true
         - match: '(?<=\*comment\s)(todo|TODO).+'
-          scope: comment.line.todo
+          scope: comment.line.todo.choicescript
 
     - match: '(^|\s)cs_+'
-      scope: keyword.trigger
+      scope: keyword.trigger.choicescript
       comment: COMPLETTION
 
     - match: '\*(create|temp)'
-      scope: keyword.declaration
+      scope: keyword.declaration.choicescript
       comment: CREATE
       push:
-        - meta_scope: keyword.declaration.create
+        - meta_scope: keyword.declaration.create.choicescript
         - match: '$'
           pop: true
         - match: '\w+?\b'
-          scope: variable.main
+          scope: variable.main.choicescript
         - match: '(?<!create)\s[^a-z]+?$'
-          scope: string
+          scope: string.choicescript
         - match: '\strue'
-          scope: variable.true
+          scope: variable.true.choicescript
         - match: '\sfalse'
-          scope: variable.false
+          scope: variable.false.choicescript
         - match: '".+?"'
-          scope: string
+          scope: string.choicescript
 
     - match: '\*(finish|ending)'
-      scope: keyword.declaration.end
+      scope: keyword.declaration.end.choicescript
       comment: ENDS
 
     - match: '\*set'
-      scope: storage.modifier.set
+      scope: storage.modifier.set.choicescript
       comment: SET
       push:
-        - meta_scope: storage.modifier.set
+        - meta_scope: storage.modifier.set.choicescript
         - match: '$'
           pop: true
         - match: '\w+?\b'
-          scope: variable.main
+          scope: variable.main.choicescript
         - match: '(?<!set)\s[^a-z]+?$'
-          scope: string
+          scope: string.choicescript
         - match: '\strue'
-          scope: variable.true
+          scope: variable.true.choicescript
         - match: '\sfalse'
-          scope: variable.false
+          scope: variable.false.choicescript
         - match: '".+'
-          scope: string
+          scope: string.choicescript
 
     - match: '\$!?{\w+}|'
-      scope: variable.main
+      scope: variable.main.choicescript
       comment: VARIABLE
     - match: '@{'
-      scope: variable.function
-      comment: MULTIREPLACE
-      push:
-        - meta_scope: variable.function
-        - match: '(}|$)'
-          pop: true
-        - match: '(\(.+?\)|(?<={)\w+?(\s|$))'
-          scope: variable.main
-        - match: '(?<=\s).+?((?=})|((?=\|)|$))'
-          scope: string.text
-        - match: '(?<=\|).+?((?=})|(?=\|)|$)'
-          scope: string.text
+      push: multireplace
 
     - match: '\*(choice|fake_choice)'
-      scope: entity.name
+      scope: entity.name.choicescript
       comment: CHOICE
     - match: '#'
-      scope: string.tag
+      scope: string.tag.choicescript
       comment: OPTIONS
       push:
-        - meta_scope: string.tag
+        - meta_scope: string.tag.choicescript
         - match: '$'
           pop: true
-        - match: '.+'
-          scope: string.text
+        - match: '\$!?{\w+}'
+          scope: variable.main.choicescript
+        - match: '@{'
+          push: multireplace
+        - match: '.+?'
+          scope: string.text.choicescript
 
     - match: '\*label'
-      scope: keyword.control.label
+      scope: keyword.control.label.choicescript
       comment: LABEL
       push:
-        - meta_scope: keyword.control.label
+        - meta_scope: keyword.control.label.choicescript
         - match: '$'
           pop: true
         - match: '\w'
-          scope: keyword.control.label.name
+          scope: keyword.control.label.name.choicescript
     - match: '\*(goto|gosub|gosub_scene|goto_scene|goto_random_scene|gotoref|return)'
-      scope: keyword.control
+      scope: keyword.control.choicescript
       comment: GOTO
       push:
-        - meta_scope: keyword.control.goto
+        - meta_scope: keyword.control.goto.choicescript
         - match: '$'
           pop: true
         - match: '_.+?\s'
-          scope: keyword.control.goto
+          scope: keyword.control.goto.choicescript
         - match: '\w+'
-          scope: keyword.control.label.name
+          scope: keyword.control.label.name.choicescript
 
     - match: '\*(if|elseif|elsif|else|if not)'
-      scope: keyword.control.conditional
+      scope: keyword.control.conditional.choicescript
       comment: IF/ELSE
       push:
-        - meta_scope: keyword.control.conditional
+        - meta_scope: keyword.control.conditional.choicescript
         - match: '$'
           pop: true
         - match: '((?<=\s)|(?<=\())not((?=\()|(?=\s))'
-          scope: keyword.control.conditional
+          scope: keyword.control.conditional.choicescript
         - match: '((?<=\s)(or|and)|\=|\!\=|\+|\-|\%\+|\%\-|\<|\>|\<\=|\>\=)'
-          scope: keyword.operator
+          scope: keyword.operator.choicescript
         - match: '(?<=\()\w+?(?=\))'
-          scope: variable.main
+          scope: variable.main.choicescript
         - match: '"\w+?"'
-          scope: string
+          scope: string.choicescript
         - match: '((?<=not\s)|(?<=if\s)|(?<=elseif\s)|(?<=elsif\s)).+?\b'
-          scope: variable.main
+          scope: variable.main.choicescript
         - match: '#'
-          scope: string.tag
+          scope: string.tag.choicescript
         - match: '(?<=#).+'
-          scope: string.text
+          scope: string.text.choicescript
         - match: '(.?+)'
-          scope: variable.main
+          scope: variable.main.choicescript
 
     - match: '\*selectable_if'
-      scope: keyword.control.conditional
+      scope: keyword.control.conditional.choicescript
       comment: SELECTABLE IF
       push:
-        - meta_scope: keyword.control.selectable
+        - meta_scope: keyword.control.selectable.choicescript
         - match: '((?=#)|$)'
           pop: true
         - match: '(\(.+?\)|(?<=selectable_if\s).+?\s)'
-          scope: variable.main
+          scope: variable.main.choicescript
 
     - match: '\*(delete|image|line_break|link|more_games|page_break|print|rand|share_this_game|setref|text_image|check_purchase|advertisement|purchase_discount|config|bug|show_password|script)'
-      scope: keyword
+      scope: keyword.choicescript
       comment: KEYWORDS
       push:
-        - meta_scope: keywords.more
+        - meta_scope: keywords.more.choicescript
         - match: '$'
           pop: true
         - match: '(?<=\s)(adfree|center|left|right|skip_description)'
-          scope: string
+          scope: string.choicescript
         - match: '.+\.(png|jpg|jpeg|gif)'
-          scope: variable.main
+          scope: variable.main.choicescript
         - match: '(?<=\s).+'
-          scope: string.text
+          scope: string.text.choicescript
         - match: '\strue'
-          scope: variable.true
+          scope: variable.true.choicescript
         - match: '\sfalse'
-          scope: variable.false
+          scope: variable.false.choicescript
 
     - match: '\*achievement'
-      scope: keyword
+      scope: keyword.choicescript
       comment: ACHIEVEMENTS
       push:
-        - meta_scope: keyword.achievements
+        - meta_scope: keyword.achievements.choicescript
         - match: '$'
           pop: true
         - match: '(?<=achievement\s).+?\s'
-          scope: keyword.control.conditional
+          scope: keyword.control.conditional.choicescript
         - match: '(?<=\s)hidden\s'
-          scope: variable.false
+          scope: variable.false.choicescript
         - match: '(?<=\s)visible\s'
-          scope: variable.true
+          scope: variable.true.choicescript
         - match: '(?<=\s)\d+\s'
-          scope: string
+          scope: string.choicescript
         - match: '(?<=\d\s).+'
-          scope: string.text
+          scope: string.text.choicescript
     - match: '\*(achieve|check_achievements)'
-      scope: keyword
+      scope: keyword.choicescript
       push:
-        - meta_scope: keyword.achieve
+        - meta_scope: keyword.achieve.choicescript
         - match: '$'
           pop: true
         - match: '(?<=\s).+'
-          scope: keyword.control.conditional
+          scope: keyword.control.conditional.choicescript
 
     - match: '\[.+?\]'
-      scope: keyword.bb
+      scope: keyword.bb.choicescript
       comment: BBCODE
 
     - match: '\*(input_text|input_number)'
-      scope: keyword
+      scope: keyword.choicescript
       comment: INPUTS
       push:
-        - meta_scope: keyword
+        - meta_scope: keyword.choicescript
         - match: '$'
           pop: true
         - match: '(?<=\s).+'
-          scope: variable.main
+          scope: variable.main.choicescript
 
     - match: '\*stat_chart'
-      scope: keyword
+      scope: keyword.choicescript
       comment: STAT CHART
       push:
-        - meta_scope: keyword
+        - meta_scope: keyword.choicescript
         - match: '(^\s*$|(?=\[)|(?=\*))'
           pop: true
         - match: '(text|percent|opposed_pair)'
-          scope: keyword.stats
+          scope: keyword.stats.choicescript
         - match: '((?<=\stext\s)|(?<=\spercent\s)|(?<=\sopposed_pair\s))\w+'
-          scope: variable.main
+          scope: variable.main.choicescript
         - match: '\w+'
-          scope: string.text
+          scope: string.text.choicescript
 
     - match: '\*(allow_reuse|disable_reuse|hide_reuse)'
-      scope: keyword
+      scope: keyword.choicescript
       comment: REUSE
       push:
-        - meta_scope: keyword.reuse
+        - meta_scope: keyword.reuse.choicescript
         - match: '\s'
           pop: true
 
     - match: '\*(author|title|scene_list)'
-      scope: entity.name.title
+      scope: entity.name.title.choicescript
       comment: STARTUP HEADER
+
+  multireplace:
+    - meta_scope: variable.function.choicescript
+    - match: '(}|$)'
+      pop: true
+    - match: '(\(.+?\)|(?<={)\w+?(\s|$))'
+      scope: variable.main.choicescript
+    - match: '(?<=\s).+?((?=})|((?=\|)|$))'
+      scope: string.text.choicescript
+    - match: '(?<=\|).+?((?=})|(?=\|)|$)'
+      scope: string.text.choicescript
